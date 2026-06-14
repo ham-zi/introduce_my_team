@@ -117,7 +117,7 @@ public class BoardService {
 	increaseViews(boardNo);
 	//게시판 조회
 	BoardDto board = boardMapper.findByBno(boardNo);
-	//이미 좋아요를 했는지 확인
+	//이미 좋아요를 했는지 확인 << 
 	
 	//파일 조회
 	List<FileDto>files =fileService.findByBno(boardNo);

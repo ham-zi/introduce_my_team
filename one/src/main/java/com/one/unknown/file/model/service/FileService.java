@@ -60,11 +60,7 @@ public class FileService {
 	}
 	
 	public String findMainFile(Long refBno) {
-		List<FileDto> files = fileMapper.findByBno(refBno);
-		if(files.isEmpty()) {
-			return null;
-		}
-		return files.get(0).getFileUrl();
+		return fileMapper.findMaxFileOrder(refBno);
 	}
 	
 	public void deleteFiles(Long refBno) {
