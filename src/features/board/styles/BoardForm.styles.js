@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../../styles/theme";
 
 // 기존 MainContainer 및 Intro 스타일 재사용
 export const MainContainer = styled.div`
@@ -109,5 +110,30 @@ export const SubmitBtn = styled.button`
 
   &:hover {
     background: #c66a5b;
+  }
+`;
+
+export const FileLabel = styled.label`
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: ${theme.color.text};
+  background: ${theme.color.bg};
+  border: 1px dashed ${theme.color.border};
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease;
+
+  &:hover {
+    border-color: ${theme.color.indigo};
+    color: ${theme.color.indigo};
+  }
+  input {
+    display: none;
   }
 `;
